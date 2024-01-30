@@ -18,6 +18,30 @@
                 <li><a href="#resources" class="hover:underline">Resources</a></li>
             </ul>
         </nav>
+    <!-- Hamburger Icon for Mobile -->
+    <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+    <!-- Mobile Menu (Initially Hidden) -->
+    <div class="mobile-menu hidden">
+        <ul>
+            <li><a href="#what-are-chatbots" class="hover:underline">What are Chatbots?</a></li>
+            <li><a href="#uses" class="hover:underline">Uses</a></li>
+            <li><a href="#advantages" class="hover:underline">Advantages</a></li>
+            <li><a href="#getting-started" class="hover:underline">Getting Started</a></li>
+            <li><a href="#resources" class="hover:underline">Resources</a></li>
+        </ul>
+    </div>
+    <!-- Main Navigation (Hidden on Small Screens) -->
+    <nav class="hidden md:flex">
+        <li><a href="#what-are-chatbots" class="hover:underline">What are Chatbots?</a></li>
+        <li><a href="#uses" class="hover:underline">Uses</a></li>
+        <li><a href="#advantages" class="hover:underline">Advantages</a></li>
+        <li><a href="#getting-started" class="hover:underline">Getting Started</a></li>
+        <li><a href="#resources" class="hover:underline">Resources</a></li>
+    </nav>
     </header>
     
     <main class="container mx-auto my-8">
