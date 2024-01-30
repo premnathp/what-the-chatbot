@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Chatbots</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-blue-500 text-white p-5">
+        <nav class="container mx-auto flex justify-between">
+            <h1 class="text-xl">Chatbot Academy</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#what-are-chatbots" class="hover:underline">What are Chatbots?</a></li>
+                <li><a href="#uses" class="hover:underline">Uses</a></li>
+                <li><a href="#advantages" class="hover:underline">Advantages</a></li>
+                <li><a href="#getting-started" class="hover:underline">Getting Started</a></li>
+                <li><a href="#resources" class="hover:underline">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto my-8">
+        <section id="intro" class="my-8">
+            <h2 class="text-2xl font-bold">Welcome to Chatbot Academy</h2>
+            <p>Discover the world of conversational AI and unlock the potential of chatbots.</p>
+        </section>
+
+        <section id="what-are-chatbots" class="my-8">
+            <h2 class="text-2xl font-bold">What are Chatbots?</h2>
+            <p>Chatbots are AI-driven software that can simulate a conversation with users in natural language through messaging applications, websites, mobile apps, or the telephone.</p>
+            <!-- Chatbot Demo in the "What are Chatbots?" Section -->
+<div id="chatbot-demo" class="my-4 p-4 bg-gray-100 rounded-lg">
+    <div id="chat-area" class="h-64 overflow-auto p-3 bg-white rounded-lg"></div>
+    <input type="text" id="user-input" class="mt-3 w-full p-2 border-gray-300 rounded-lg" placeholder="Ask the chatbot...">
+</div>
+
+<script>
+    document.getElementById('user-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let userInput = this.value;
+            let chatArea = document.getElementById('chat-area');
+            
+            // Display user message
+            let userMsg = document.createElement('p');
+            userMsg.textContent = `You: ${userInput}`;
+            chatArea.appendChild(userMsg);
+            
+            // Simple chatbot response logic
+            let botResponse = document.createElement('p');
+            botResponse.textContent = `Chatbot: ${getBotResponse(userInput)}`;
+            chatArea.appendChild(botResponse);
+
+            // Clear input
+            this.value = '';
+        }
+    });
+
+    function getBotResponse(input) {
+        // Basic responses based on keywords
+        if (input.toLowerCase().includes('hello')) {
+            return 'Hello! How can I assist you?';
+        } else if (input.toLowerCase().includes('help')) {
+            return 'Sure, what do you need help with?';
+        } else {
+            return 'Sorry, I am not sure how to respond to that.';
+        }
+    }
+</script>
+
+        </section>
+
+        <section id="uses" class="my-8">
+            <h2 class="text-2xl font-bold">Uses of Chatbots</h2>
+            <!-- Content for uses with examples -->
+        </section>
+
+        <section id="advantages" class="my-8">
+            <h2 class="text-2xl font-bold">Advantages Over Traditional Systems</h2>
+            <!-- Comparative analysis content -->
+        </section>
+
+        <section id="getting-started" class="my-8">
+            <h2 class="text-2xl font-bold">Getting Started with Chatbots</h2>
+            <!-- Guide on starting with chatbot development -->
+        </section>
+
+        <section id="resources" class="my-8">
+            <h2 class="text-2xl font-bold">Further Resources</h2>
+            <!-- Links to further learning resources -->
+        </section>
+    </main>
+
+    <footer class="bg-blue-500 text-white p-5 text-center">
+        Chatbot Academy © 2024
+    </footer>
+</body>
+</html>
